@@ -24,9 +24,9 @@
         	<assets>
 			<icon>resources/media/icon.png</icon>
 			<fanart>resources/media/fanart.png</fanart>
-			<screenshot>resources/media/PRPN.png</screenshot>
-			<screenshot>resources/media/PRPN.png</screenshot>
-			<screenshot>resources/media/PRPN.png</screenshot>
+			<screenshot>resources/media/1.jpg</screenshot>
+			<screenshot>resources/media/2.jpg</screenshot>
+			<screenshot>resources/media/3.jpg</screenshot>
 		</assets>
   </extension>
 </addon>
