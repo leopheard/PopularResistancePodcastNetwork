@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.audio.PRPN" name="Popular Resistance Podcast Network" version="1.0.0" provider-name="leopheard">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.xbmcswift2" version="2.4.0"/>
+    <import addon="script.module.beautifulsoup4" version="4.3.1"/>
+    <import addon="script.module.requests" version="1.1.0"/>
+    <import addon="script.module.routing" version="0.2.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>audio</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <language></language>
+    <summary lang="en">Popular Resistance Podcast Network</summary>
+    <description lang="en">The Popular Resistance Podcast Network (PPRN) is a network of podcasters offering a left perspective independent of the two major political parties. Members of the network provide news and analysis relevant to a people-powered movement for progressive change. In this age of information overload, we must be selective in our news and analysis. Clearing The Fog, Voices With Vision, Common Censored, Black Agenda Radio, Moderate Rebels, Act Out, Drug Positive</description>
+    <license>The MIT License (MIT)</license>
+    <forum></forum>
+    <email>leopheard@gmail.com</email>
+    <source>https://github.com/leopheard/PRPN.git</source>
+    <website>https://popularresistance.org/prpn/</website>
+    <audio_guide></audio_guide>
+        	<assets>
+			<icon>resources/media/icon.png</icon>
+			<fanart>resources/media/fanart.png</fanart>
+			<screenshot>resources/media/PRPN.png</screenshot>
+			<screenshot>resources/media/PRPN.png</screenshot>
+			<screenshot>resources/media/PRPN.png</screenshot>
+		</assets>
+  </extension>
+</addon>
