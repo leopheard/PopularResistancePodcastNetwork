@@ -378,21 +378,21 @@ def get_playable_podcast6(soup6):
     """
     subjects = []
 
-    for content in soup6.find_all('item'):
+    for content in soup6.find_all('body'):
         
         try:        
-            link = content.find('enclosure')
+            link = content.find('li')
             link = link.get('url')
             print "\n\nLink: ", link
 
-            title = content.find('title')
+            title = content.find('div', {'class': 'libsyn-item-body'})
             title = title.get_text()
 
 #            desc = content.find('itunes:subtitle')
 #            desc = desc.get_text()
 
-            thumbnail = content.find('itunes:image')
-            thumbnail = thumbnail.get('href')
+#            thumbnail = content.find('itunes:image')
+#            thumbnail = thumbnail.get('href')
 
         except AttributeError:
             continue
@@ -401,7 +401,7 @@ def get_playable_podcast6(soup6):
                 'url': link,
                 'title': title,
 #                'desc': desc,
-                'thumbnail': thumbnail,
+                'thumbnail': "https://secureimg.stitcher.com/feedimagesplain328/164080.jpg",
         }
         
         subjects.append(item) 
