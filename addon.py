@@ -69,7 +69,7 @@ def all_episodes2():
     """
     contains playable podcasts listed as just-in
     """
-    soup2 = mainaddon.get_soup(URL2)
+    soup2 = mainaddon.get_soup2(URL2)
     
     playable_podcast2 = mainaddon.get_playable_podcast2(soup2)
     
@@ -82,7 +82,7 @@ def all_episodes3():
     """
     contains playable podcasts listed as just-in
     """
-    soup3 = mainaddon.get_soup(URL3)
+    soup3 = mainaddon.get_soup3(URL3)
     
     playable_podcast3 = mainaddon.get_playable_podcast3(soup3)
     
@@ -95,7 +95,7 @@ def all_episodes4():
     """
     contains playable podcasts listed as just-in
     """
-    soup4 = mainaddon.get_soup(URL4)
+    soup4 = mainaddon.get_soup4(URL4)
     
     playable_podcast4 = mainaddon.get_playable_podcast4(soup4)
     
@@ -108,7 +108,7 @@ def all_episodes5():
     """
     contains playable podcasts listed as just-in
     """
-    soup5 = mainaddon.get_soup(URL5)
+    soup5 = mainaddon.get_soup5(URL5)
     
     playable_podcast5 = mainaddon.get_playable_podcast5(soup5)
     
@@ -121,7 +121,7 @@ def all_episodes6():
     """
     contains playable podcasts listed as just-in
     """
-    soup6 = mainaddon.get_soup(URL6)
+    soup6 = mainaddon.get_soup6(URL6)
     
     playable_podcast6 = mainaddon.get_playable_podcast6(soup6)
     
@@ -134,7 +134,7 @@ def all_episodes7():
     """
     contains playable podcasts listed as just-in
     """
-    soup7 = mainaddon.get_soup(URL7)
+    soup7 = mainaddon.get_soup7(URL7)
     
     playable_podcast7 = mainaddon.get_playable_podcast7(soup7)
     

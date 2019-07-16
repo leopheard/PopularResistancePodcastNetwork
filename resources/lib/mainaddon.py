@@ -41,7 +41,7 @@ def get_soup3(url3):
     page = requests.get(url3)
     soup3 = BeautifulSoup(page.text, 'html.parser')
     
-    print "type: ", type(soup1)
+    print "type: ", type(soup3)
     return soup3
 
 get_soup3("http://commoncensored.libsyn.com/rss")
@@ -112,8 +112,8 @@ def get_playable_podcast1(soup1):
             title = content.find('title')
             title = title.get_text()
 
-            desc = content.find('itunes:subtitle')
-            desc = desc.get_text()
+#            desc = content.find('itunes:subtitle')
+#            desc = desc.get_text()
 
             thumbnail = content.find('itunes:image')
             thumbnail = thumbnail.get('href')
@@ -144,7 +144,7 @@ def compile_playable_podcast1(playable_podcast1):
             'label': podcast['title'],
             'thumbnail': podcast['thumbnail'],
             'path': podcast['url'],
-            'info': podcast['desc'],
+#            'info': podcast['desc'],
             'is_playable': True,
     })
 
@@ -156,7 +156,7 @@ def get_playable_podcast2(soup2):
     """
     subjects = []
 
-    for content in soup1.find_all('item'):
+    for content in soup2.find_all('item'):
         
         try:        
             link = content.find('enclosure')
@@ -166,8 +166,8 @@ def get_playable_podcast2(soup2):
             title = content.find('title')
             title = title.get_text()
 
-            desc = content.find('itunes:subtitle')
-            desc = desc.get_text()
+#            desc = content.find('itunes:subtitle')
+#            desc = desc.get_text()
 
             thumbnail = content.find('itunes:image')
             thumbnail = thumbnail.get('href')
@@ -178,8 +178,8 @@ def get_playable_podcast2(soup2):
         item = {
                 'url': link,
                 'title': title,
-                'desc': desc,
-                'thumbnail': thumbnail,
+#                'desc': desc,
+                'thumbnail': "http://confessor.wpfwfm.org/pix/voiceswithvision_it_94.jpg",
         }
         
         subjects.append(item) 
@@ -198,7 +198,7 @@ def compile_playable_podcast2(playable_podcast2):
             'label': podcast['title'],
             'thumbnail': podcast['thumbnail'],
             'path': podcast['url'],
-            'info': podcast['desc'],
+#            'info': podcast['desc'],
             'is_playable': True,
     })
 
@@ -211,7 +211,7 @@ def get_playable_podcast3(soup3):
     """
     subjects = []
 
-    for content in soup1.find_all('item'):
+    for content in soup3.find_all('item'):
         
         try:        
             link = content.find('enclosure')
@@ -221,8 +221,8 @@ def get_playable_podcast3(soup3):
             title = content.find('title')
             title = title.get_text()
 
-            desc = content.find('itunes:subtitle')
-            desc = desc.get_text()
+#            desc = content.find('itunes:subtitle')
+#            desc = desc.get_text()
 
             thumbnail = content.find('itunes:image')
             thumbnail = thumbnail.get('href')
@@ -233,7 +233,7 @@ def get_playable_podcast3(soup3):
         item = {
                 'url': link,
                 'title': title,
-                'desc': desc,
+#                'desc': desc,
                 'thumbnail': thumbnail,
         }
         
@@ -253,7 +253,7 @@ def compile_playable_podcast3(playable_podcast3):
             'label': podcast['title'],
             'thumbnail': podcast['thumbnail'],
             'path': podcast['url'],
-            'info': podcast['desc'],
+#            'info': podcast['desc'],
             'is_playable': True,
     })
 
@@ -267,7 +267,7 @@ def get_playable_podcast4(soup4):
     """
     subjects = []
 
-    for content in soup1.find_all('item'):
+    for content in soup4.find_all('item'):
         
         try:        
             link = content.find('enclosure')
@@ -277,11 +277,11 @@ def get_playable_podcast4(soup4):
             title = content.find('title')
             title = title.get_text()
 
-            desc = content.find('itunes:subtitle')
-            desc = desc.get_text()
+#            desc = content.find('itunes:subtitle')
+#            desc = desc.get_text()
 
-            thumbnail = content.find('itunes:image')
-            thumbnail = thumbnail.get('href')
+#            thumbnail = content.find('itunes:image')
+#            thumbnail = thumbnail.get('href')
 
         except AttributeError:
             continue
@@ -289,8 +289,8 @@ def get_playable_podcast4(soup4):
         item = {
                 'url': link,
                 'title': title,
-                'desc': desc,
-                'thumbnail': thumbnail,
+#                'desc': desc,
+                'thumbnail': "https://pbcdn1.podbean.com/imglogo/image-logo/277790/BlackAgendaRadio_AlbumArt.jpg",
         }
         
         subjects.append(item) 
@@ -309,7 +309,7 @@ def compile_playable_podcast4(playable_podcast4):
             'label': podcast['title'],
             'thumbnail': podcast['thumbnail'],
             'path': podcast['url'],
-            'info': podcast['desc'],
+#            'info': podcast['desc'],
             'is_playable': True,
     })
 
@@ -322,7 +322,7 @@ def get_playable_podcast5(soup5):
     """
     subjects = []
 
-    for content in soup1.find_all('item'):
+    for content in soup5.find_all('item'):
         
         try:        
             link = content.find('enclosure')
@@ -332,8 +332,8 @@ def get_playable_podcast5(soup5):
             title = content.find('title')
             title = title.get_text()
 
-            desc = content.find('itunes:subtitle')
-            desc = desc.get_text()
+#            desc = content.find('itunes:subtitle')
+#            desc = desc.get_text()
 
             thumbnail = content.find('itunes:image')
             thumbnail = thumbnail.get('href')
@@ -344,7 +344,7 @@ def get_playable_podcast5(soup5):
         item = {
                 'url': link,
                 'title': title,
-                'desc': desc,
+#                'desc': desc,
                 'thumbnail': thumbnail,
         }
         
@@ -364,7 +364,7 @@ def compile_playable_podcast5(playable_podcast5):
             'label': podcast['title'],
             'thumbnail': podcast['thumbnail'],
             'path': podcast['url'],
-            'info': podcast['desc'],
+#            'info': podcast['desc'],
             'is_playable': True,
     })
 
@@ -378,7 +378,7 @@ def get_playable_podcast6(soup6):
     """
     subjects = []
 
-    for content in soup1.find_all('item'):
+    for content in soup6.find_all('item'):
         
         try:        
             link = content.find('enclosure')
@@ -388,8 +388,8 @@ def get_playable_podcast6(soup6):
             title = content.find('title')
             title = title.get_text()
 
-            desc = content.find('itunes:subtitle')
-            desc = desc.get_text()
+#            desc = content.find('itunes:subtitle')
+#            desc = desc.get_text()
 
             thumbnail = content.find('itunes:image')
             thumbnail = thumbnail.get('href')
@@ -400,7 +400,7 @@ def get_playable_podcast6(soup6):
         item = {
                 'url': link,
                 'title': title,
-                'desc': desc,
+#                'desc': desc,
                 'thumbnail': thumbnail,
         }
         
@@ -420,7 +420,7 @@ def compile_playable_podcast6(playable_podcast6):
             'label': podcast['title'],
             'thumbnail': podcast['thumbnail'],
             'path': podcast['url'],
-            'info': podcast['desc'],
+#            'info': podcast['desc'],
             'is_playable': True,
     })
 
@@ -433,7 +433,7 @@ def get_playable_podcast7(soup7):
     """
     subjects = []
 
-    for content in soup1.find_all('item'):
+    for content in soup7.find_all('item'):
         
         try:        
             link = content.find('enclosure')
@@ -443,8 +443,8 @@ def get_playable_podcast7(soup7):
             title = content.find('title')
             title = title.get_text()
 
-            desc = content.find('itunes:subtitle')
-            desc = desc.get_text()
+#            desc = content.find('itunes:subtitle')
+#            desc = desc.get_text()
 
             thumbnail = content.find('itunes:image')
             thumbnail = thumbnail.get('href')
@@ -455,7 +455,7 @@ def get_playable_podcast7(soup7):
         item = {
                 'url': link,
                 'title': title,
-                'desc': desc,
+#                'desc': desc,
                 'thumbnail': thumbnail,
         }
         
@@ -475,13 +475,8 @@ def compile_playable_podcast7(playable_podcast7):
             'label': podcast['title'],
             'thumbnail': podcast['thumbnail'],
             'path': podcast['url'],
-            'info': podcast['desc'],
+#            'info': podcast['desc'],
             'is_playable': True,
     })
 
     return items
-
-
-
-
-
