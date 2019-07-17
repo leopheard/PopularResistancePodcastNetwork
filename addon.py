@@ -8,7 +8,7 @@ URL2 = "https://archive.wpfwfm.org/getrss.php?id=voiceswdiocoop"
 URL3 = "http://commoncensored.libsyn.com/rss"
 URL4 = "https://blackagendaradio.podbean.com/feed.xml"
 URL5 = "https://moderaterebels.libsyn.com/rss"
-URL6 = "https://actout.libsyn.com/page/1/size/1600"
+URL6 = "https://actout.libsyn.com/rss"
 URL7 = "http://drugpositive.org/rss"
 
 @plugin.route('/')

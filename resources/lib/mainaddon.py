@@ -7,7 +7,7 @@ URL2 = "https://archive.wpfwfm.org/getrss.php?id=voiceswdiocoop"
 URL3 = "http://commoncensored.libsyn.com/rss"
 URL4 = "https://blackagendaradio.podbean.com/feed.xml"
 URL5 = "https://moderaterebels.libsyn.com/rss"
-URL6 = "https://actout.libsyn.com/page/1/size/1600"
+URL6 = "https://actout.libsyn.com/rss"
 URL7 = "http://drugpositive.org/rss"
 
 def get_soup1(url1):
@@ -80,7 +80,7 @@ def get_soup6(url6):
     print "type: ", type(soup6)
     return soup6
 
-get_soup6("https://actout.libsyn.com/page/1/size/1600")
+get_soup6("https://actout.libsyn.com/rss")
 
 def get_soup7(url7):
     """
@@ -169,8 +169,8 @@ def get_playable_podcast2(soup2):
 #            desc = content.find('itunes:subtitle')
 #            desc = desc.get_text()
 
-            thumbnail = content.find('itunes:image')
-            thumbnail = thumbnail.get('href')
+#            thumbnail = content.find('itunes:image')
+#            thumbnail = thumbnail.get('href')
 
         except AttributeError:
             continue
@@ -378,14 +378,14 @@ def get_playable_podcast6(soup6):
     """
     subjects = []
 
-    for content in soup6.find_all('body'):
+    for content in soup6.find_all('item'):
         
         try:        
-            link = content.find('li')
+            link = content.find('enclosure')
             link = link.get('url')
             print "\n\nLink: ", link
 
-            title = content.find('div', {'class': 'libsyn-item-body'})
+            title = content.find('title')
             title = title.get_text()
 
 #            desc = content.find('itunes:subtitle')
@@ -401,7 +401,7 @@ def get_playable_podcast6(soup6):
                 'url': link,
                 'title': title,
 #                'desc': desc,
-                'thumbnail': "https://secureimg.stitcher.com/feedimagesplain328/164080.jpg",
+                'thumbnail': "https://popularresistance-uploads.s3.amazonaws.com/uploads/2018/12/act-out.jpg",
         }
         
         subjects.append(item) 
