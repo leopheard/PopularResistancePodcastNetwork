@@ -11,10 +11,10 @@ Moderate Rebels<br>
 Act Out<br>
 Drug Positive<br>
 
-To install this addon, either use the <a href="https://www.tvaddons.co/github-browser-kodi/">Kodi Github installer</a> addon or save the .zip file downloaded from the 'clone or download' button to somewhere the Kodi can access. Then on the Kodi, go to addons > install from zip file.<br>
+^^^ To install this addon, either use the <a href="https://www.tvaddons.co/github-browser-kodi/">Kodi Github installer</a> addon or save the .zip file downloaded from the 'clone or download' button to somewhere the Kodi can access (e.g. network drive or USB stick). Then on the Kodi, go to addons > install from zip file.<br>
 
 #PRPN
 #PopularResistance
 
 <a href="https://popularresistance.org/prpn/">Popular Resistance Podcast Network</a><br>
-<a href="https://popularresistance.org/prpn/"><img src="https://popularresistance-uploads.s3.amazonaws.com/uploads/2018/09/prpn-banner.jpg">
+<a href="https://popularresistance.org/prpn/"><img src="https://popularresistance-uploads.s3.amazonaws.com/uploads/2018/09/prpn-banner.jpg"><br><a href="http://www.kodi.tv"><img src="https://kodi.tv/sites/default/files/page/field_image/about--devices.jpg">
