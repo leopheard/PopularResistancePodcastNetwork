@@ -14,7 +14,7 @@ def get_soup1(url1):
     page = requests.get(url1)
     soup1 = BeautifulSoup(page.text, 'html.parser')
     print("type: ", type(soup1))
-    return soup
+    return soup1
 get_soup1("https://clearingthefogradioshow.libsyn.com/rss")
 
 def get_soup2(url2):
@@ -165,7 +165,7 @@ def get_playable_podcast4(soup4):
         item = {
                 'url': link,
                 'title': title,
-                'thumbnail': "https://pbcdn1.podbean.com/imglogo/image-logo/277790/BlackAgendaRadio_AlbumArt.jpg",
+                'thumbnail': "https://popularresistance-uploads.s3.amazonaws.com/uploads/2018/12/black-agenda2.jpg",
         }
         subjects.append(item) 
     return subjects
